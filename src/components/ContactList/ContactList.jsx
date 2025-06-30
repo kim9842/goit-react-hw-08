@@ -1,6 +1,5 @@
 import { useSelector } from "react-redux";
 import Contact from "../Contact/Contact";
-import Grid from "../Form/Form";
 import s from "./ContactList.module.css";
 import { selectFilteredContacts } from "../../redux/filters/selectors";
 import Loader from "../Loader/Loader";
