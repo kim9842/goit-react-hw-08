@@ -1,0 +1,20 @@
+/* Home.module.css */
+
+.homeWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* занимает всю высоту экрана */
+  background-color: #f0f4f8; /* светло-серый фон */
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.homeTitle {
+  font-size: 2.5rem;
+  color: #333;
+  font-weight: bold;
+  max-width: 600px;
+  line-height: 1.2;
+}

@@ -1,0 +1,47 @@
+.contactItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f1f5f9; /* светло-серый фон */
+  padding: 16px 20px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s ease;
+}
+
+.contactItem:hover {
+  background-color: #e2e8f0; /* чуть темнее при наведении */
+}
+
+.contactItemText {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+  color: #1e293b; /* тёмный текст */
+  font-weight: 500;
+}
+
+.buttonDeleteContact {
+  background-color: #ef4444; /* красный */
+  border: none;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.buttonDeleteContact:hover {
+  background-color: #dc2626; /* тёмно-красный */
+}
+
+/* Кастомный стиль для toast при удалении */
+.customToastDelete {
+  background-color: #dc2626 !important;
+  color: #fff !important;
+  font-weight: bold;
+  font-size: 0.95rem;
+}

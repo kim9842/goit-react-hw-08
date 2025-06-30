@@ -1,0 +1,13 @@
+.layoutContainer {
+  min-height: 100vh;
+  background-color: #f8fafc; /* светлый фон */
+  padding: 32px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content {
+  width: 100%;
+  max-width: 960px;
+}
