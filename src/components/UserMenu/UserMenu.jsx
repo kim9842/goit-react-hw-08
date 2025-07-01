@@ -1,10 +1,12 @@
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import s from "./UserMenu.module.css";
 import { logoutThunk } from "../../redux/auth/operations";
 import { Slide, toast } from "react-toastify";
+import { selectUserName } from "../../redux/auth/selectors";
 
 const UserMenu = () => {
   const dispatch = useDispatch();
+  const userName = useSelector(selectUserName);
 
   const handleLogout = async () => {
     try {
@@ -12,11 +14,6 @@ const UserMenu = () => {
       toast("Goodbye, hope to see you again soon!", {
         position: "bottom-center",
         autoClose: 3000,
-        hideProgressBar: false,
-        closeOnClick: false,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
         theme: "light",
         transition: Slide,
       });
@@ -25,11 +22,6 @@ const UserMenu = () => {
       toast("Something went wrong, please try again", {
         position: "bottom-center",
         autoClose: 3000,
-        hideProgressBar: false,
-        closeOnClick: false,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
         theme: "dark",
         transition: Slide,
       });
@@ -38,6 +30,7 @@ const UserMenu = () => {
 
   return (
     <div className={s.authList}>
+      <span className={s.username}>Welcome, {userName}</span>
       <button type="button" onClick={handleLogout} className={s.button}>
         Logout
       </button>
